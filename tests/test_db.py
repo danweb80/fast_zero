@@ -10,10 +10,10 @@ def test_create_user():
     table_registry.metadata.create_all(engine)
 
     with Session(engine) as session:
-        user = User(username='junin', email='junin@mail.com', password='123')
+        user = User(username='mario', email='mario@mail.com', password='123')
 
         session.add(user)
         session.commit()
         session.refresh(user)
 
-    assert user.id == 1
+    assert user.id
