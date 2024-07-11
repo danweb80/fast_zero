@@ -8,5 +8,9 @@ class UserSchema(BaseModel):
 
 
 class UserPublic(BaseModel):
+    id: int
     username: str | None
     email: EmailStr
+
+class UserList(BaseModel):
+    users: list[UserPublic]
